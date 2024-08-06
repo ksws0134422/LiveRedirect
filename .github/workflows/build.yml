@@ -33,7 +33,7 @@ jobs:
       - name: Cross Compile
         run: |
           cd ./Golang
-          GOOS=linux GOARCH=arm32 go build -o allinone_linux_arm32
+          GOOS=linux GOARCH=arm GOARM=7 go build -o allinone_linux_arm32
       - name: Upload Cross Compile Artifacts
         uses: actions/upload-artifact@v4
         with:
